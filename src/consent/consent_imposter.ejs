@@ -1,0 +1,15 @@
+{
+    "port": "8081",
+    "name": "Test mountebank service - Consent",
+    "protocol": "http",
+    "recordRequests": true,
+    "defaultResponse": {
+        "headers": {
+            "connection": "keep-alive"
+        }
+    },
+    "stubs": [
+        <% include consent_service.ejs %>,
+        { "responses": [ <% include consent_proxy.ejs %>]}
+    ]
+}

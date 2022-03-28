@@ -1,0 +1,12 @@
+{
+    "and": [
+        <% include ../resource %>,
+        {
+            "or":[
+                {
+                    "inject": "<%- stringify(filename, 'src/consent/get_consent/success/predicates_inject.js') %>"
+                }
+            ]
+        }
+    ]
+}
